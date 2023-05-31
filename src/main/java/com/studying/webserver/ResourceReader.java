@@ -14,8 +14,9 @@ public class ResourceReader {
         if (!file.exists() || file.isDirectory()) {
             throw new FileNotFoundException("File " + file.getPath() + " not found");
         }
+
         StringBuilder content = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while (br.ready()) {
                 content.append(br.readLine());
             }

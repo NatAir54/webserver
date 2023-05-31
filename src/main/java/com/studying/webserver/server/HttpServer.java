@@ -1,4 +1,6 @@
-package com.studying.webserver;
+package com.studying.webserver.server;
+
+import com.studying.webserver.RequestHandler;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -26,6 +28,7 @@ public class HttpServer {
     void start() {
         try (ServerSocket server = new ServerSocket(port)) {
             System.out.println("Server started.\nListening for connections on port: " + port + " ...\n");
+
             while (true) {
                 try(Socket socket = server.accept();
                     BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));

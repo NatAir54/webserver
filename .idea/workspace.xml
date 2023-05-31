@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="empty ws created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/HttpServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResponseWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/webapp/sources/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/webapp/sources/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/HttpServerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/RequestParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/MethodNotAllowedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/ServerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/studying/webserver/HttpServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/HttpServerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +38,14 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2PBNseHV6HXkebgc29DaBsVootW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,6 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -69,13 +72,13 @@
       <recent name="C:\Users\User\Documents\java\studying\webserver\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStarter">
+  <component name="RunManager" selected="Application.Starter">
     <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.Starter" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.server.Starter" />
       <module name="web-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="PATTERN" value="com.studying.webserver.exceptions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,11 +107,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.AppStarter" />
+      <item itemvalue="Application.Starter" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStarter" />
+        <item itemvalue="Application.Starter" />
       </list>
     </recent_temporary>
   </component>

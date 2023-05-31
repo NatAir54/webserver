@@ -1,9 +1,11 @@
 package com.studying.webserver;
 
+import com.studying.webserver.exceptions.BadRequestException;
+import com.studying.webserver.exceptions.MethodNotAllowedException;
 import lombok.AllArgsConstructor;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
+import java.util.Objects;
 
 
 @AllArgsConstructor
@@ -12,63 +14,32 @@ public class RequestParser {
 
     HttpRequest parseRequest() throws IOException {
         HttpRequest request = new HttpRequest();
-        String firstLine = "";
-
-        int counter = 0;
-        while (true) {
-            String str = reader.readLine();
-            System.out.println(str);
-            if (str.equals("END")) {
-                break;
-            }
-//            counter++;
-//            if (counter == 1) {
-//                firstLine = str;
-//            }
-
-            StringTokenizer parse = new StringTokenizer(str);
-            String method = parse.nextToken().toUpperCase();
-            String fileRequested = parse.nextToken().toLowerCase();
-            request.setMethod(HttpMethod.valueOf(method));
-            request.setUri(fileRequested);
-        }
-        //injectUriAndMethod(firstLine, request);
+        String firstLine = reader.readLine();
+        injectUriAndMethod(firstLine, request);
+        injectHeaders(reader, request);
 
         return request;
     }
 
-    private static void injectUriAndMethod(String line, HttpRequest request){
-        String[] firstLine = line.split(" ", 3);
-        request.setMethod(HttpMethod.valueOf(firstLine[0]));
-        request.setUri(firstLine[1]);
+    static void injectUriAndMethod(String line, HttpRequest request){
+        if(Objects.isNull(line)) {
+            throw new BadRequestException();
+        }
 
-//        String uri = line.substring(line.indexOf(' ') + 1, line.lastIndexOf(' '));
-//        String method = line.substring(0, line.indexOf('/'));
-//        request.setMethod(HttpMethod.valueOf(method));
-//        request.setUri(uri);
+        String uri = line.substring(line.indexOf("/"), line.lastIndexOf(" HTTP"));
+        request.setUri(uri);
+
+        String method = line.substring(0, line.indexOf(" "));
+        HttpMethod httpMethod = HttpMethod.valueOf(method);
+
+        if(httpMethod == HttpMethod.POST) {
+            throw new MethodNotAllowedException("Method " + httpMethod + " is not allowed");
+        }
+
+        request.setMethod(httpMethod);
     }
 
     private static void injectHeaders(BufferedReader reader, HttpRequest request) {
 
     }
 }
-
-// GET /index.html
-
-// uri = /index.html
-// webAppPath = src/main/resources/webapp
-
-// path to resource = webAppPath + uri => src/main/resources/webapp/index.html => read with FileInputStream
-
-// ====================================================================
-
-// GET /css/style.css
-// uri = /css/style.css
-// webAppPath = src/main/resources/webapp
-
-// path to resource = webAppPath + uri => src/main/resources/webapp/css/style.css => read with FileInputStream
-
-// =============================
-
-// GET uri
-// response -> webAppPath + uri

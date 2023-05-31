@@ -22,11 +22,10 @@ public class RequestHandler {
 
         try {
             HttpRequest request = requestParser.parseRequest();
-            // if(!(request.getMethod() == HttpMethod.GET)) {
-               //
-            //}
+
             String content = resourceReader.readResource(request.getUri());
             responseWriter.writeSuccessResponse(content);
+
         } catch (FileNotFoundException e) {
             responseWriter.writeNotSuccessResponse();
         }catch(Exception e) {

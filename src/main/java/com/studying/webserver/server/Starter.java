@@ -1,10 +1,9 @@
-package com.studying.webserver;
+package com.studying.webserver.server;
 
-import java.io.IOException;
 
 public class Starter {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         HttpServer server = new HttpServer();
         server.setPort(3000);
         server.setWebAppPath("src/main/resources/webapp");
