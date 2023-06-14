@@ -23,7 +23,7 @@ public class RequestParser {
 
     static void injectUriAndMethod(String line, HttpRequest request){
         if(Objects.isNull(line)) {
-            throw new BadRequestException();
+            throw new BadRequestException("Null request received");
         }
 
         String uri = line.substring(line.indexOf("/"), line.lastIndexOf(" HTTP"));
@@ -35,7 +35,6 @@ public class RequestParser {
         if(httpMethod == HttpMethod.POST) {
             throw new MethodNotAllowedException("Method " + httpMethod + " is not allowed");
         }
-
         request.setMethod(httpMethod);
     }
 

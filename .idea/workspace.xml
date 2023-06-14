@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="empty ws created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/MethodNotAllowedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/ServerException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/studying/webserver/HttpServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/HttpServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/MethodNotAllowedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/MethodNotAllowedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/exceptions/ServerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/studying/webserver/RequestParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/RequestParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +67,89 @@
       <recent name="C:\Users\User\Documents\java\studying\webserver\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Starter">
-    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.server.Starter" />
+  <component name="RunManager" selected="JUnit.RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest">
+    <configuration name="Unnamed" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <module name="web-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.studying.webserver.exceptions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+    <configuration name="RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studying.webserver" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.RequestParserTest" />
+      <option name="METHOD_NAME" value="testInjectUriAndMethodSetEmptyUriCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFolderCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studying.webserver" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.RequestParserTest" />
+      <option name="METHOD_NAME" value="testInjectUriAndMethodSetUriPathIncludingFolderCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFoldersCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studying.webserver" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.RequestParserTest" />
+      <option name="METHOD_NAME" value="testInjectUriAndMethodSetUriPathIncludingFoldersCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studying.webserver" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.RequestParserTest" />
+      <option name="METHOD_NAME" value="testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studying.webserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studying.webserver" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.RequestParserTest" />
+      <option name="METHOD_NAME" value="testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,11 +169,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Starter" />
+      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
+      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFolderCorrectly" />
+      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFoldersCorrectly" />
+      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
+      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Starter" />
+        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
+        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
+        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
+        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFolderCorrectly" />
+        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetUriPathIncludingFoldersCorrectly" />
       </list>
     </recent_temporary>
   </component>
