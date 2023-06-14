@@ -1,15 +1,14 @@
 package com.studying.webserver.server;
 
 import com.studying.webserver.io.RequestHandler;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+
 public class HttpServer {
     private int port;
     private String webAppPath;
-
 
     public void setPort(int port) {
         if (port < 1 || port > 1024) {
@@ -33,8 +32,9 @@ public class HttpServer {
             while (true) {
                 try (Socket socket = server.accept();
                      BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))) {
-                    RequestHandler requestHandler = new RequestHandler(br, bw, webAppPath);
+                     OutputStream out = socket.getOutputStream())
+                {
+                    RequestHandler requestHandler = new RequestHandler(br, out, webAppPath);
                     requestHandler.handle();
                 }
             }

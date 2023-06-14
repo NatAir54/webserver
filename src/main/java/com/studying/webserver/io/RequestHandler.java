@@ -13,7 +13,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class RequestHandler {
     BufferedReader input;
-    BufferedWriter output;
+    OutputStream output;
     private String webAppPath;
 
 
@@ -24,7 +24,7 @@ public class RequestHandler {
 
         try {
             HttpRequest request = requestParser.parseRequest();
-            String content = resourceReader.readResource(request.getUri());
+            InputStream content = resourceReader.readResource(request.getUri());
             responseWriter.writeSuccessResponse(content);
 
         } catch (BadRequestException e) {
@@ -33,6 +33,8 @@ public class RequestHandler {
             responseWriter.writeMethodNotAllowedResponse(e.getMessage());
         } catch (FileNotFoundException e) {
             responseWriter.writeFileNotFoundResponse(e.getMessage());
+        } catch (RuntimeException e) {
+            responseWriter.writeSomethingIsWrong(e.getMessage());
         }
     }
 

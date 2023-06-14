@@ -1,37 +1,37 @@
 package com.studying.webserver.io;
 
 import lombok.AllArgsConstructor;
-import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 
 @AllArgsConstructor
 public class ResponseWriter {
-    BufferedWriter writer;
+    OutputStream writer;
 
-    void writeSuccessResponse(String content) throws IOException {
-        writer.write("HTTP/1.1 200 OK");
-        writer.newLine();
-        writer.newLine();
-        writer.write(content);
-        writer.flush();
+    void writeSuccessResponse(InputStream inputStream) throws IOException {
+        writer.write("HTTP/1.1 200 OK\n\n".getBytes());
+        byte[] buffer = new byte[2051];
+        int count;
+        while((count = inputStream.read(buffer)) != -1) {
+            writer.write(buffer, 0, count);
+        }
     }
 
-    void writeBadRequestResponse(String message) throws IOException {
-        writer.write("HTTP/1.1 400 " + message);
-        writer.newLine();
-        writer.newLine();
+    void writeBadRequestResponse(String statusText) throws IOException {
+        writer.write(("HTTP/1.1 400 " + statusText + "\n\n").getBytes());
     }
 
-    void writeMethodNotAllowedResponse(String message) throws IOException {
-        writer.write("HTTP/1.1 405 " + message);
-        writer.newLine();
-        writer.newLine();
+    void writeMethodNotAllowedResponse(String statusText) throws IOException {
+        writer.write(("HTTP/1.1 405 " + statusText + "\n\n").getBytes());
     }
 
-    void writeFileNotFoundResponse(String message) throws IOException {
-        writer.write("HTTP/1.1 404 " + message);
-        writer.newLine();
-        writer.newLine();
+    void writeFileNotFoundResponse(String statusText) throws IOException {
+        writer.write(("HTTP/1.1 404 " + statusText + "\n\n").getBytes());
+    }
+
+    void writeSomethingIsWrong(String statusText) throws IOException {
+        writer.write(("HTTP/1.1 500 " + statusText + "\n\n").getBytes());
     }
 }

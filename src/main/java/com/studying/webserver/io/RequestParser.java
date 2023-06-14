@@ -5,6 +5,8 @@ import com.studying.webserver.exceptions.MethodNotAllowedException;
 import lombok.AllArgsConstructor;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -38,7 +40,15 @@ public class RequestParser {
         request.setMethod(httpMethod);
     }
 
-    private static void injectHeaders(BufferedReader reader, HttpRequest request) {
+    //not finished
+    private static void injectHeaders(BufferedReader reader, HttpRequest request) throws IOException {
+        Map<String, String> headersMap = new HashMap<>();
+        while(true) {
+            String line = reader.readLine();
+            if (Objects.isNull(line) || line.isBlank()) {
+                break;
+            }
 
+        }
     }
 }

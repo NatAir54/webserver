@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="RequestParserTest added">
+    <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="error messages in ResponseWriter added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResourceReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/ResponseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResponseWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResourceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResponseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResponseWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/studying/webserver/RequestParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/io/RequestParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,12 +208,20 @@
       <option name="project" value="LOCAL" />
       <updated>1686732860769</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="error messages in ResponseWriter added">
+      <created>1686736577013</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686736577013</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="empty ws created" />
     <MESSAGE value="RequestParserTest added" />
-    <option name="LAST_COMMIT_MESSAGE" value="RequestParserTest added" />
+    <MESSAGE value="error messages in ResponseWriter added" />
+    <option name="LAST_COMMIT_MESSAGE" value="error messages in ResponseWriter added" />
   </component>
 </project>

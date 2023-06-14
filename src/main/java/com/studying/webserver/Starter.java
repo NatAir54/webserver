@@ -14,6 +14,8 @@ public class Starter {
             server.setWebAppPath("src/main/resources/webapp");
             server.start();
         } catch (IllegalArgumentException | IOException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
