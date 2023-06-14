@@ -1,5 +1,7 @@
-package com.studying.webserver;
+package com.studying.webserver.io;
 
+import com.studying.webserver.exceptions.BadRequestException;
+import com.studying.webserver.exceptions.MethodNotAllowedException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,14 +24,15 @@ public class RequestHandler {
 
         try {
             HttpRequest request = requestParser.parseRequest();
-
             String content = resourceReader.readResource(request.getUri());
             responseWriter.writeSuccessResponse(content);
 
+        } catch (BadRequestException e) {
+            responseWriter.writeBadRequestResponse(e.getMessage());
+        } catch (MethodNotAllowedException e) {
+            responseWriter.writeMethodNotAllowedResponse(e.getMessage());
         } catch (FileNotFoundException e) {
-            responseWriter.writeNotSuccessResponse();
-        }catch(Exception e) {
-            responseWriter.writeBadRequestResponse();
+            responseWriter.writeFileNotFoundResponse(e.getMessage());
         }
     }
 

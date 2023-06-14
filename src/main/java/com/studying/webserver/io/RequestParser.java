@@ -1,4 +1,4 @@
-package com.studying.webserver;
+package com.studying.webserver.io;
 
 import com.studying.webserver.exceptions.BadRequestException;
 import com.studying.webserver.exceptions.MethodNotAllowedException;
@@ -21,8 +21,8 @@ public class RequestParser {
         return request;
     }
 
-    static void injectUriAndMethod(String line, HttpRequest request){
-        if(Objects.isNull(line)) {
+    static void injectUriAndMethod(String line, HttpRequest request) {
+        if (Objects.isNull(line)) {
             throw new BadRequestException("Null request received");
         }
 
@@ -32,7 +32,7 @@ public class RequestParser {
         String method = line.substring(0, line.indexOf(" "));
         HttpMethod httpMethod = HttpMethod.valueOf(method);
 
-        if(httpMethod == HttpMethod.POST) {
+        if (httpMethod == HttpMethod.POST) {
             throw new MethodNotAllowedException("Method " + httpMethod + " is not allowed");
         }
         request.setMethod(httpMethod);

@@ -1,8 +1,9 @@
-package com.studying.webserver;
+package com.studying.webserver.io;
 
 import lombok.AllArgsConstructor;
 import java.io.BufferedWriter;
 import java.io.IOException;
+
 
 @AllArgsConstructor
 public class ResponseWriter {
@@ -16,17 +17,21 @@ public class ResponseWriter {
         writer.flush();
     }
 
-    void writeNotSuccessResponse() throws IOException {
-        writer.write("HTTP/1.1 404 NOT FOUND");
+    void writeBadRequestResponse(String message) throws IOException {
+        writer.write("HTTP/1.1 400 " + message);
         writer.newLine();
         writer.newLine();
     }
 
-    void writeBadRequestResponse() throws IOException {
-        writer.write("HTTP/1.1 404 BAD REQUEST");
+    void writeMethodNotAllowedResponse(String message) throws IOException {
+        writer.write("HTTP/1.1 405 " + message);
         writer.newLine();
         writer.newLine();
     }
 
-
+    void writeFileNotFoundResponse(String message) throws IOException {
+        writer.write("HTTP/1.1 404 " + message);
+        writer.newLine();
+        writer.newLine();
+    }
 }
