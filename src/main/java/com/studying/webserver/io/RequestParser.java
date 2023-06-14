@@ -19,7 +19,6 @@ public class RequestParser {
         String firstLine = reader.readLine();
         injectUriAndMethod(firstLine, request);
         injectHeaders(reader, request);
-
         return request;
     }
 
@@ -40,15 +39,18 @@ public class RequestParser {
         request.setMethod(httpMethod);
     }
 
-    //not finished
-    private static void injectHeaders(BufferedReader reader, HttpRequest request) throws IOException {
+
+    static void injectHeaders(BufferedReader reader, HttpRequest request) throws IOException {
         Map<String, String> headersMap = new HashMap<>();
         while(true) {
             String line = reader.readLine();
             if (Objects.isNull(line) || line.isBlank()) {
                 break;
             }
-
+            int separator = line.indexOf(':');
+            headersMap.put(line.substring(0, separator),
+                    line.substring(separator + 1));
         }
+        request.setHeaders(headersMap);
     }
 }

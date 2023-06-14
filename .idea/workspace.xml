@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="error messages in ResponseWriter added">
+    <list default="true" id="8dc49b2b-f0e5-406c-a543-6e55445c1223" name="Changes" comment="ResourceReader edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/Starter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/RequestParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResourceReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResponseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/io/ResponseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studying/webserver/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/studying/webserver/io/RequestParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/studying/webserver/io/RequestParserSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +41,25 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2PBNseHV6HXkebgc29DaBsVootW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\java\studying\webserver\src\main" />
@@ -91,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RequestParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestParserSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-server" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +101,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.studying.webserver.io" />
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserSimpleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestParserSimpleTest.testInjectUriAndMethodSetEmptyUriCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-server" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +116,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.studying.webserver.io" />
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserSimpleTest" />
       <option name="METHOD_NAME" value="testInjectUriAndMethodSetEmptyUriCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestParserSimpleTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-server" />
       <extension name="coverage">
         <pattern>
@@ -131,14 +132,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.studying.webserver.io" />
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserSimpleTest" />
       <option name="METHOD_NAME" value="testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestParserSimpleTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-server" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +148,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.studying.webserver.io" />
-      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.studying.webserver.io.RequestParserSimpleTest" />
       <option name="METHOD_NAME" value="testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -170,18 +171,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.Starter" />
-      <item itemvalue="JUnit.RequestParserTest" />
-      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
-      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
-      <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
+      <item itemvalue="JUnit.RequestParserSimpleTest" />
+      <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
+      <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
+      <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Starter" />
-        <item itemvalue="JUnit.RequestParserTest" />
-        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
-        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
-        <item itemvalue="JUnit.RequestParserTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
+        <item itemvalue="JUnit.RequestParserSimpleTest" />
+        <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodThrowMethodNotAllowedExceptionReceivingPostRequest" />
+        <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodThrowBasRequestExceptionReceivingNullRequest" />
+        <item itemvalue="JUnit.RequestParserSimpleTest.testInjectUriAndMethodSetEmptyUriCorrectly" />
       </list>
     </recent_temporary>
   </component>
@@ -215,13 +216,29 @@
       <option name="project" value="LOCAL" />
       <updated>1686736577013</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ResourceReader edited">
+      <created>1686748145841</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686748145841</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ResourceReader edited">
+      <created>1686748189773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686748189773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="empty ws created" />
     <MESSAGE value="RequestParserTest added" />
     <MESSAGE value="error messages in ResponseWriter added" />
-    <option name="LAST_COMMIT_MESSAGE" value="error messages in ResponseWriter added" />
+    <MESSAGE value="ResourceReader edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="ResourceReader edited" />
   </component>
 </project>

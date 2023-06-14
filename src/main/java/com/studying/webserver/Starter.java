@@ -1,7 +1,6 @@
 package com.studying.webserver;
 
 import com.studying.webserver.server.HttpServer;
-
 import java.io.IOException;
 
 
@@ -15,8 +14,6 @@ public class Starter {
             server.start();
         } catch (IllegalArgumentException | IOException e) {
             System.out.println(e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
